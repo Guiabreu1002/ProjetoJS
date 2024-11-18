@@ -33,7 +33,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     if (email === 'admin@exemplo.com' && password === '1234abcd') {
       feedback.textContent = 'Login bem-sucedido!';
       feedback.style.color = 'green';
-      window.location.href = 'https://developer.mozilla.org/pt-BR/docs/Learn/Forms';
+      window.location.href = '../pages/home.html';
     } else {
       feedback.textContent = 'Usuário ou senha incorretos!';
     }

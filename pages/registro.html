@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+<body>
+    <div class="container">
+        <form id="registerForm">
+            <h2 style="color: #0866FF;">Cadastro</h2>
+            
+            <label for="name">Nome:</label>
+            <input type="text" id="name_registrar" name="name" required>
+            <p class="error-message" id="emailError"></p>
+
+            <label for="email_registrar">E-mail:</label>
+            <input type="email" id="email_registrar" name="email_registrar" required>
+            <p class="error-message" id="emailError"></p>
+      
+            <label for="password_registrar">Senha:</label>
+            <input type="password" id="password_registrar" name="password_registrar" required>
+            <p class="error-message" id="passwordError"></p>
+
+            <label for="animes">Animes Favoritos:</label>
+            <textarea id="animes" name="animes" rows="5" cols="30" style="resize: none; border-radius: 5px;"></textarea>
+            <p class="error-message" id="passwordError"></p>
+      
+            <button type="submit" class="botaoentrar">Cadastrar</button>
+            <p id="feedback"></p>
+        </form>
+        <p style="text-align: center;">Mudou de ideia? <a href="../pages/index.html" style="text-decoration: none;">Voltar</a></p>
+    </div>
+    
+</body>
+</html>
