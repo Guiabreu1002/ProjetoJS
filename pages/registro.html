@@ -11,27 +11,28 @@
         <form id="registerForm">
             <h2 style="color: #0866FF;">Cadastro</h2>
             
-            <label for="name">Nome:</label>
-            <input type="text" id="name_registrar" name="name" required>
-            <p class="error-message" id="emailError"></p>
+            <label for="name_register">Nome:</label>
+            <input type="text" id="name_register" name="name_register" placeholder="Digite seu nome" required>
+            <p class="error-message" id="nameError"></p>
 
-            <label for="email_registrar">E-mail:</label>
-            <input type="email" id="email_registrar" name="email_registrar" required>
+            <label for="email_register">E-mail:</label>
+            <input type="email" id="email_register" name="email_register" placeholder="Digite seu e-mail" required>
             <p class="error-message" id="emailError"></p>
       
-            <label for="password_registrar">Senha:</label>
-            <input type="password" id="password_registrar" name="password_registrar" required>
+            <label for="password_register">Senha:</label>
+            <input type="password" id="password_register" name="password_register" placeholder="Digite sua senha" required>
             <p class="error-message" id="passwordError"></p>
 
             <label for="animes">Animes Favoritos:</label>
             <textarea id="animes" name="animes" rows="5" cols="30" style="resize: none; border-radius: 5px;"></textarea>
-            <p class="error-message" id="passwordError"></p>
+            <p class="error-message" id="animeError"></p>
       
             <button type="submit" class="botaoentrar">Cadastrar</button>
             <p id="feedback"></p>
         </form>
         <p style="text-align: center;">Mudou de ideia? <a href="../pages/index.html" style="text-decoration: none;">Voltar</a></p>
     </div>
-    
+
+<script src="../js/registro.js"></script>  
 </body>
 </html>
