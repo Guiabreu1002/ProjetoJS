@@ -3,10 +3,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (usuario) {
         const animeList = document.getElementById('animeList');
+        const boasVindas = document.getElementById('boasVindas');
+        const mostraEmail = document.getElementById('emailUsuario');
 
-        const emailDisplay = document.getElementById('emailUsuario');
-        if (emailDisplay) {
-            emailDisplay.textContent = `Seu e-mail é: ${usuario.email}`;
+        if (boasVindas) {
+            boasVindas.textContent = `Bem-vindo, ${usuario.nome || 'Usuário'}!`;
+        }
+
+
+        if (mostraEmail) {
+            mostraEmail.textContent = `Seu e-mail é: ${usuario.email}`;
         }
 
         const animeImages = {
