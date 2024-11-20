@@ -84,6 +84,6 @@
 
 
   .animeitem:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
   
