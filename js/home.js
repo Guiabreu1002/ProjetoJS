@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     if (usuario) {
         const animeList = document.getElementById('animeList');
 
+        const emailDisplay = document.getElementById('emailUsuario');
+        if (emailDisplay) {
+            emailDisplay.textContent = `Seu e-mail é: ${usuario.email}`;
+        }
+
         const animeImages = {
             "Naruto": "../imagens/naruto.jpg",
             "naruto": "../imagens/naruto.jpg",
