@@ -6,7 +6,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const emailRegistrar = document.getElementById('email_register').value;
     const nameRegistrar = document.getElementById('name_register').value;
     const passwordRegistrar = document.getElementById('password_register').value;
-    const animes = document.getElementById('animes').value;
+    const animes = document.getElementById('animes').value.split('\n');
 
     const nameError = document.getElementById('nameError')
     const emailError = document.getElementById('emailError');
