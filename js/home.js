@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const usuario = JSON.parse(localStorage.getItem('usuario'));
+    const usuario = JSON.parse(localStorage.getItem('user'));
 
     if (usuario) {
         const animeList = document.getElementById('animeList');

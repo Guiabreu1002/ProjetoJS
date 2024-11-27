@@ -1,5 +1,5 @@
 
-document.getElementById('registerForm').addEventListener('submit', function(event) {
+document.getElementById('registerForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
 
@@ -18,9 +18,10 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     feedback.textContent = '';
     nameError.textContent = '';
 
-    const nameRegEx = /^[a-z]{3,}$/;
-    if (!nameRegEx.test(nameError)) {
+    const nameRegEx = /^[a-zA-Z._-]{3,16}$/;
+    if (!nameRegEx.test(nameRegistrar)) {
         nameError.textContent = "Nome invalido";
+        return;
     }
     const emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegEx.test(emailRegistrar)) {
@@ -35,17 +36,31 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     }
 
     const usuario = {
-        nome: nameRegistrar,
+        name: nameRegistrar,
         email: emailRegistrar,
-        senha: passwordRegistrar,
-        animes: animes
+        password: passwordRegistrar,
+        anime_preference: []
     };
 
-    localStorage.setItem('usuario',JSON.stringify(usuario));
+    async function register() {
+        try {
+            const response = await fetch("https://projetoweb-api.vercel.app/auth/register", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(usuario)
+            }).then(resp => resp);
+    
+            if (response.ok) {
+                feedback.textContent = "Registro realizado com sucesso!";
+                window.location.href = "../pages/index.html";
+            }
+        }catch(error){
+            console.log(error)
+            return;
+        }
+    }
 
-    feedback.textContent = "Registro realizado com sucesso!";
-
-    window.location.href = "../pages/index.html";
-
-
+    register();
 });
